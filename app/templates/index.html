@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facial Recognition Demo</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Facial Recognition Demo <span class="badge">FastAPI + OpenCV</span></h1>
+  </header>
+  <div class="container">
+    <div class="card">
+      <h2>Live Camera</h2>
+      <div class="row">
+        <button onclick="startCam()">Start camera</button>
+        <small>Your video stays local; only frames are sent to localhost for processing.</small>
+      </div>
+      <div class="stack">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay" class="overlay"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Image Upload</h2>
+      <div class="row">
+        <input id="imageInput" type="file" accept="image/*">
+      </div>
+      <img id="imgOut" alt="Annotated output will appear here"/>
+    </div>
+
+    <div class="card">
+      <h2>Video Upload</h2>
+      <div class="row">
+        <input id="videoInput" type="file" accept="video/*">
+        <button id="vidBtn" onclick="document.getElementById('videoInput').click()">Upload video</button>
+        <a id="vidLink" class="hidden" href="#" download>Download processed video</a>
+      </div>
+      <small>Processing runs on CPU; large videos may take a while.</small>
+    </div>
+
+    <div class="card">
+      <h2>How to Train Recognition</h2>
+      <ol>
+        <li>Create folders under <code>data/known/&lt;person_name&gt;/</code>.</li>
+        <li>Place 3–10 clear JPGs of each person (frontal face preferred).</li>
+        <li>Restart the server. The recognizer will train on startup.</li>
+      </ol>
+      <small>If no training images found, the app will still detect faces and label them as <em>face</em>.</small>
+    </div>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
