@@ -148,10 +148,10 @@ facial_recognition_fullstack/
 
 ---
 
-## 🧍‍♂️ About the Developer
+## 🧍‍♂️ About Me
 
 **John Doe**  
-📧 johndoe@johndoe.com  
+📧 atif@dscientist.com  
 _Data Scientist | Machine Learning Enthusiast | Transforming Data into Insights_  
 
 **Core Skills:**  
