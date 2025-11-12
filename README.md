@@ -150,7 +150,7 @@ facial_recognition_fullstack/
 
 ## 🧍‍♂️ About Me
 
-**John Doe**  
+**Atif Majeed**  
 📧 atif@dscientist.com  
 _Data Scientist | Machine Learning Enthusiast | Transforming Data into Insights_  
 
